@@ -120,7 +120,7 @@ export default function App() {
       <p>
         <br />
         <a href="https://github.com/cerissad/cerissa-weather-app-proj">
-          Source Code{" "}
+          Source Code
         </a>
         by Cerissa De Ocampo
       </p>

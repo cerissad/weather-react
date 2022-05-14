@@ -1,25 +1,121 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import "./styles.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="container">
+      <div className="row align-items-center">
+        <div className="col-3">
+          <a href="/">Chicago</a>
+        </div>
+        <div className="col-3">
+          <a href="/">Manhattan</a>
+        </div>
+        <div className="col-3">
+          <a href="/">Miami</a>
+        </div>
+        <div className="col-3">
+          <a href="/">Manila</a>
+        </div>
+      </div>
+      <br />
+      <div className="city">
+        <form>
+          <input
+            type="text"
+            placeholder="City"
+            className="city-box"
+            width="10px"
+          />
+
+          <input type="submit" value="Search" className="btn btn-search" />
+          <button type="button" className="btn btn-secondary">
+            Current
+          </button>
+        </form>
+      </div>
+      <h1 className="text-capitalize">
+        <br /> Chicago
+      </h1>
+      <h2>
+        <span className="current-date">Saturday, 14:33</span>
+        <br />
+        <span>Clouds</span>
+      </h2>
+      <div className="main-temp">
+        <h2 className="main-emoji-temp">
+          🌥
+          <img src="" alt="" />
+          <span>81</span>°F
+        </h2>
+        <h3 className="more-weather">
+          Humidity: <span>48</span>%
+          <br />
+          Wind: <span>25</span>mph
+        </h3>
+      </div>
+      <div className="weekly">Weekly Forecast</div>
+
+      <div className="row align-items-center">
+        <div className="col-2">
+          Monday
+          <div className="emoji-temp">☁</div>
+          <div className="text-temp">
+            Hi:43°F
+            <br />
+            Lo:39°F
+          </div>
+        </div>
+
+        <div className="col-2">
+          Tuesday
+          <div className="emoji-temp">🌧</div>
+          <div className="text-temp">
+            Hi:41°F
+            <br />
+            Lo:18°F
+          </div>
+        </div>
+
+        <div className="col-2">
+          Wednesday
+          <div className="emoji-temp">🌤</div>
+          <div className="text-temp">
+            Hi:24°F
+            <br />
+            Lo:22°F
+          </div>
+        </div>
+
+        <div className="col-2">
+          Thursday
+          <div className="emoji-temp">🌨</div>
+          <div className="text-temp">
+            Hi:28°F
+            <br />
+            Lo:22°F
+          </div>
+        </div>
+
+        <div className="col-2">
+          Friday
+          <div className="emoji-temp">🌨</div>
+          <div className="text-temp">
+            Hi:25°F
+            <br />
+            Lo:11°F
+          </div>
+        </div>
+      </div>
+
+      <p>
+        <br />
+        <a href="https://github.com/cerissad/cerissa-weather-app-proj">
+          Source Code{" "}
         </a>
-      </header>
+        by Cerissa De Ocampo
+      </p>
     </div>
   );
 }
-
-export default App;

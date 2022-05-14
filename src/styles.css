@@ -1,0 +1,66 @@
+.container {
+  display: block;
+  margin: 40px;
+  border: solid;
+  border-radius: 30px;
+  border-color: gainsboro;
+  max-width: 600px;
+  padding: 10px 50px 20px;
+}
+
+.card {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.btn-search {
+  background: red;
+  color: white;
+}
+
+.main-temp {
+  position: relative;
+  left: 300px;
+  top: -100px;
+}
+
+.main-emoji-temp {
+  font-size: 40px;
+  color: #2741d4;
+}
+
+.cityLinks {
+  padding: 20px;
+}
+
+.city {
+  display: block;
+  margin: 0 auto;
+}
+
+.city-box {
+  box-sizing: content-box;
+  width: 50%;
+}
+
+.emoji-temp {
+  font-size: 40px;
+}
+
+.text-temp {
+  color: #6f7fdd;
+  font-weight: bold;
+}
+
+.more-weather {
+  color: gray;
+  font-size: 20px;
+}
+
+.weekly {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 30px;
+}

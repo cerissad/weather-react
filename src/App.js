@@ -7,16 +7,24 @@ export default function App() {
     <div className="container">
       <div className="row align-items-center">
         <div className="col-3">
-          <a href="/">Chicago</a>
+          <a href="/" rel="noreferrer">
+            Chicago
+          </a>
         </div>
         <div className="col-3">
-          <a href="/">Manhattan</a>
+          <a href="/" rel="noreferrer">
+            Manhattan
+          </a>
         </div>
         <div className="col-3">
-          <a href="/">Miami</a>
+          <a href="/" rel="noreferrer">
+            Miami
+          </a>
         </div>
         <div className="col-3">
-          <a href="/">Manila</a>
+          <a href="/" rel="noreferrer">
+            Manila
+          </a>
         </div>
       </div>
       <br />

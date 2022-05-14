@@ -119,9 +119,7 @@ export default function App() {
 
       <p>
         <br />
-        <a href="https://github.com/cerissad/cerissa-weather-app-proj">
-          Source Code
-        </a>
+        <a href="https://github.com/cerissad/weather-react">Source Code</a>
         by Cerissa De Ocampo
       </p>
     </div>

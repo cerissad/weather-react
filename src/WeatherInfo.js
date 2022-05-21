@@ -16,7 +16,7 @@ export default function WeatherInfo(props) {
       </h2>
       <div className="main-temp">
         <h2 className="main-emoji-temp">
-          <img src="http://openweathermap.org/img/wn/04d.png" alt="" />
+          <img src={props.data.iconURL} alt="" />
           <span>{Math.round(props.data.temperature)}</span>°F
         </h2>
         <h3 className="more-weather">

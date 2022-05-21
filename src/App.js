@@ -30,17 +30,24 @@ export default function App() {
       <br />
       <div className="city">
         <form>
-          <input
-            type="text"
-            placeholder="City"
-            className="city-box"
-            width="10px"
-          />
-
-          <input type="submit" value="Search" className="btn btn-search" />
-          <button type="button" className="btn btn-secondary">
-            Current
-          </button>
+          <div className="row align-items-center">
+            <div className="col-6">
+              <input
+                type="text"
+                placeholder="Enter a City"
+                className="city-box"
+                width="300px"
+              />
+            </div>
+            <div className="col-2">
+              <input type="submit" value="Search" className="btn btn-search" />
+            </div>
+            <div className="col-2">
+              <button type="button" className="btn btn-secondary">
+                Current
+              </button>
+            </div>
+          </div>
         </form>
       </div>
       <h1 className="text-capitalize">
@@ -86,7 +93,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="col-2">
+        <div className="col-3">
           Wednesday
           <div className="emoji-temp">🌤</div>
           <div className="text-temp">

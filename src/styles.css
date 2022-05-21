@@ -4,7 +4,7 @@
   border: solid;
   border-radius: 30px;
   border-color: gainsboro;
-  max-width: 600px;
+  max-width: 550px;
   padding: 10px 50px 20px;
 }
 
@@ -40,8 +40,9 @@
 }
 
 .city-box {
-  box-sizing: content-box;
-  width: 50%;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5p;
 }
 
 .emoji-temp {

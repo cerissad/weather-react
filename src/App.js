@@ -133,60 +133,6 @@ export default function App(props) {
           <WeatherInfo data={weatherData} />
         </div>
 
-        <div className="weekly">Weekly Forecast</div>
-
-        <div className="row align-items-center">
-          <div className="col-2">
-            Monday
-            <div className="emoji-temp">☁</div>
-            <div className="text-temp">
-              Hi:43°F
-              <br />
-              Lo:39°F
-            </div>
-          </div>
-
-          <div className="col-2">
-            Tuesday
-            <div className="emoji-temp">🌧</div>
-            <div className="text-temp">
-              Hi:41°F
-              <br />
-              Lo:18°F
-            </div>
-          </div>
-
-          <div className="col-3">
-            Wednesday
-            <div className="emoji-temp">🌤</div>
-            <div className="text-temp">
-              Hi:24°F
-              <br />
-              Lo:22°F
-            </div>
-          </div>
-
-          <div className="col-2">
-            Thursday
-            <div className="emoji-temp">🌨</div>
-            <div className="text-temp">
-              Hi:28°F
-              <br />
-              Lo:22°F
-            </div>
-          </div>
-
-          <div className="col-2">
-            Friday
-            <div className="emoji-temp">🌨</div>
-            <div className="text-temp">
-              Hi:25°F
-              <br />
-              Lo:11°F
-            </div>
-          </div>
-        </div>
-
         <p>
           <br />
           <a href="https://github.com/cerissad/weather-react">Source Code</a>

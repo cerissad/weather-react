@@ -10,7 +10,6 @@ export default function App(props) {
   const [city, setCity] = useState("Chicago");
 
   function handleResponse(response) {
-    console.log(response);
     setweatherData({
       ready: true,
       date: new Date(response.data.dt * 1000),
@@ -38,6 +37,43 @@ export default function App(props) {
     setCity(event.target.value);
   }
 
+  function showManhattan(event) {
+    event.preventDefault();
+
+    const apiKey = "cfc5cad501ca51e328475f69bd6d7dd0";
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=manhattan&units=imperial&appid=${apiKey}`;
+    axios.get(apiURL).then(handleResponse);
+  }
+
+  function showMiami(event) {
+    event.preventDefault();
+
+    const apiKey = "cfc5cad501ca51e328475f69bd6d7dd0";
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=miami&units=imperial&appid=${apiKey}`;
+    axios.get(apiURL).then(handleResponse);
+  }
+
+  function showManila(event) {
+    event.preventDefault();
+
+    const apiKey = "cfc5cad501ca51e328475f69bd6d7dd0";
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=manila&units=imperial&appid=${apiKey}`;
+    axios.get(apiURL).then(handleResponse);
+  }
+
+  function getLoc(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(handlePosition);
+  }
+
+  function handlePosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = "cfc5cad501ca51e328475f69bd6d7dd0";
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+    axios.get(apiURL).then(handleResponse);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="container">
@@ -48,17 +84,17 @@ export default function App(props) {
             </a>
           </div>
           <div className="col-3">
-            <a href="/" rel="noreferrer">
+            <a href="/" rel="noreferrer" onClick={showManhattan}>
               Manhattan
             </a>
           </div>
           <div className="col-3">
-            <a href="/" rel="noreferrer">
+            <a href="/" rel="noreferrer" onClick={showMiami}>
               Miami
             </a>
           </div>
           <div className="col-3">
-            <a href="/" rel="noreferrer">
+            <a href="/" rel="noreferrer" onClick={showManila}>
               Manila
             </a>
           </div>
@@ -84,7 +120,11 @@ export default function App(props) {
                 />
               </div>
               <div className="col-2">
-                <button type="button" className="btn btn-secondary">
+                <button
+                  type="button"
+                  onClick={getLoc}
+                  className="btn btn-secondary"
+                >
                   Current
                 </button>
               </div>
@@ -150,7 +190,7 @@ export default function App(props) {
         <p>
           <br />
           <a href="https://github.com/cerissad/weather-react">Source Code</a>
-          by Cerissa De Ocampo
+          <span> by Cerissa De Ocampo</span>
         </p>
       </div>
     );

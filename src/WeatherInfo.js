@@ -1,5 +1,6 @@
 import React from "react";
 import GetDate from "./GetDate";
+import WeatherTemp from "./WeatherTemp";
 
 export default function WeatherInfo(props) {
   return (
@@ -15,10 +16,12 @@ export default function WeatherInfo(props) {
         <span className="text-capitalize">{props.data.description}</span>
       </h2>
       <div className="main-temp">
-        <h2 className="main-emoji-temp">
+        <div className="main-emoji-temp">
           <img src={props.data.iconURL} alt="" />
-          <span>{Math.round(props.data.temperature)}</span>°F
-        </h2>
+
+          <WeatherTemp farenheit={props.data.temperature} />
+        </div>
+
         <h3 className="more-weather">
           Humidity: <span>{props.data.humidity}</span>%
           <br />

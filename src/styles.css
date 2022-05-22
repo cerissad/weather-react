@@ -22,7 +22,7 @@
 .main-temp {
   position: relative;
   left: 275px;
-  top: -100px;
+  top: -175px;
 }
 
 .main-emoji-temp {
@@ -64,4 +64,8 @@
   font-weight: bold;
   text-decoration: underline;
   padding: 30px;
+}
+
+.unit {
+  font-size: 18px;
 }

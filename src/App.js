@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
 import "bootstrap/dist/css/bootstrap.css";
@@ -12,6 +13,7 @@ export default function App(props) {
   function handleResponse(response) {
     setweatherData({
       ready: true,
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
@@ -23,7 +25,7 @@ export default function App(props) {
   }
 
   function search() {
-    const apiKey = "cfc5cad501ca51e328475f69bd6d7dd0";
+    const apiKey = "307f2bb4ef18a21f48e63f06fa722227";
     let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
     axios.get(apiURL).then(handleResponse);
   }
@@ -69,7 +71,7 @@ export default function App(props) {
   function handlePosition(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
-    let apiKey = "cfc5cad501ca51e328475f69bd6d7dd0";
+    let apiKey = "307f2bb4ef18a21f48e63f06fa722227";
     let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
     axios.get(apiURL).then(handleResponse);
   }
@@ -131,6 +133,7 @@ export default function App(props) {
             </div>
           </form>
           <WeatherInfo data={weatherData} />
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
 
         <p>

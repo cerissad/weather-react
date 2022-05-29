@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 
 export default function WeatherTemp(props) {
-  const [unit, setUnit] = useState("f");
+  const [unit, setUnit] = useState(props.units);
+  console.log(props.units);
 
   function showCel(event) {
     event.preventDefault();
-    setUnit("c");
+    setUnit("metric");
   }
 
   function showFaren(event) {
     event.preventDefault();
-    setUnit("f");
+    setUnit("imperial");
   }
 
-  if (unit === "f") {
+  if (unit === "imperial") {
     return (
       <div>
         <span>{Math.round(props.farenheit)}</span>

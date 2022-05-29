@@ -10,7 +10,7 @@
 
 .card {
   display: block;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 10px;
 }
 
@@ -68,9 +68,14 @@
 .unit {
   font-size: 18px;
   font-weight: bold;
+  padding: 10px 10px 10px;
 }
 
 a {
   text-decoration: none;
   color: #1631ca;
+}
+
+.WeeklyForecast {
+  text-align: center;
 }

@@ -10,8 +10,6 @@ export default function ForecastDay(props) {
     return days[day];
   }
 
-  console.log(day);
-
   return (
     <div>
       {day()}
@@ -23,9 +21,9 @@ export default function ForecastDay(props) {
         />
       </div>
       <div className="text-temp">
-        Hi:{Math.round(props.data.temp.max)}°F
+        Hi:{Math.round(props.data.temp.max)}°
         <br />
-        Lo:{Math.round(props.data.temp.min)}°F
+        Lo:{Math.round(props.data.temp.min)}°
       </div>
     </div>
   );
